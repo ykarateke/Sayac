@@ -1,20 +1,67 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function App() {
+const CounterApp = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Uygulama açıldığında kaydedilen sayacı getir
+    const loadCount = async () => {
+      try {
+        const storedCount = await AsyncStorage.getItem('counter');
+        if (storedCount !== null) {
+          setCount(parseInt(storedCount));
+        }
+      } catch (error) {
+        console.error("Sayaç yüklenirken hata oluştu:", error);
+      }
+    };
+
+    loadCount();
+  }, []);
+
+  useEffect(() => {
+    // Sayacın değeri her değiştiğinde onu kaydet
+    const saveCount = async () => {
+      try {
+        await AsyncStorage.setItem('counter', count.toString());
+      } catch (error) {
+        console.error("Sayaç kaydedilirken hata oluştu:", error);
+      }
+    };
+
+    saveCount();
+  }, [count]);
+
+  const resetCounter = async () => {
+    try {
+      await AsyncStorage.setItem('counter', '0');
+      setCount(0);
+    } catch (error) {
+      console.error("Sayaç sıfırlanırken hata oluştu:", error);
+    }
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.counterText}>Sayaç: {count}</Text>
+      <Button title="Arttır" onPress={() => setCount(count + 1)} />
+      <Button title="Sıfırla" onPress={resetCounter} />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  counterText: {
+    fontSize: 32,
+    marginBottom: 20,
   },
 });
+
+export default CounterApp;
