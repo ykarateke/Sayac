@@ -3,7 +3,9 @@
 ```markdown
 # CounterApp - React Native Sayaç Uygulaması
 
-Bu proje, kullanıcıların ekrana her tıkladığında bir sayacı artırmasını ve uygulamadan çıkıp tekrar girdiğinde bile bu sayaç değerinin korunmasını sağlayan basit bir React Native uygulamasıdır. Ayrıca, kullanıcıların sayacı sıfırlamasına olanak tanıyan bir buton da eklenmiştir.
+Bu proje, kullanıcıların ekrana her tıkladığında bir sayacı artırmasını ve uygulamadan çıkıp
+tekrar girdiğinde bile bu sayaç değerinin korunmasını sağlayan basit bir React Native uygulamasıdır.
+Ayrıca, kullanıcıların sayacı sıfırlamasına olanak tanıyan bir buton da eklenmiştir.
 
 ## Özellikler
 
@@ -50,14 +52,16 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyi
 
 ### 1. **@react-native-async-storage/async-storage**
 
-- **Açıklama:** `AsyncStorage`, küçük anahtar-değer çiftlerini yerel olarak saklamak için kullanılır. Bu projede, sayaç değerini uygulama kapatılıp açıldığında bile saklamak için kullanıyoruz.
+- **Açıklama:** `AsyncStorage`, küçük anahtar-değer çiftlerini yerel olarak saklamak için kullanılır.
+- Bu projede, sayaç değerini uygulama kapatılıp açıldığında bile saklamak için kullanıyoruz.
 - **Kurulum:**
 
   ```bash
   npm install @react-native-async-storage/async-storage
   ```
 
-- **Neden Kullanıldı?**: Kullanıcı verilerini kalıcı hale getirmek için, örneğin sayaç değerini saklayıp, kullanıcı tekrar uygulamayı açtığında bu değeri geri yüklemek için.
+- **Neden Kullanıldı?**: Kullanıcı verilerini kalıcı hale getirmek için, örneğin sayaç değerini saklayıp,
+- kullanıcı tekrar uygulamayı açtığında bu değeri geri yüklemek için.
 
 ## Kullanım
 
@@ -77,4 +81,5 @@ Katkıda bulunmak için projeyi forklayabilir ve değişikliklerinizi pull reque
 Bu proje MIT lisansı altında lisanslanmıştır.
 ```
 
-Bu dosya, proje hakkında gerekli tüm bilgileri kod blokları ve formatlandırmalarla düzenli bir şekilde sunar. Projeyi klonlayıp kurulum adımlarını izleyen herhangi bir kişi, kolayca projeyi çalıştırabilir ve anlayabilir.
+Bu dosya, proje hakkında gerekli tüm bilgileri kod blokları ve formatlandırmalarla düzenli bir şekilde sunar.
+Projeyi klonlayıp kurulum adımlarını izleyen herhangi bir kişi, kolayca projeyi çalıştırabilir ve anlayabilir.
