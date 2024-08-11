@@ -18,24 +18,14 @@ Ayrıca, kullanıcıların sayacı sıfırlamasına olanak tanıyan bir buton da
 - **React Native:** Mobil uygulamalar geliştirmek için kullanılan JavaScript tabanlı framework.
 - **AsyncStorage:** React Native'de kalıcı veriler saklamak için kullanılan bir depolama API'si.
 
-## Kurulum
 
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
-
-1. **Depoyu Klonlayın:**
-
-   ```bash
-   git clone https://github.com/kullaniciadi/counter-app.git
-   cd counter-app
-   ```
-
-2. **Gerekli Paketleri Yükleyin:**
+**Gerekli Paketleri Yükleyin:**
 
    ```bash
    npm install
    ```
 
-3. **Uygulamayı Çalıştırın:**
+**Uygulamayı Çalıştırın:**
 
    - iOS: 
    
@@ -71,15 +61,3 @@ Uygulamayı başlattığınızda ekranda bir sayaç ve iki buton görünecektir:
 - **Sıfırla** butonuna tıkladığınızda sayaç değeri sıfırlanır.
 
 Kullanıcı uygulamadan çıkıp yeniden girdiğinde, en son kaydedilen sayaç değeri yüklenir.
-
-## Katkıda Bulunma
-
-Katkıda bulunmak için projeyi forklayabilir ve değişikliklerinizi pull request olarak gönderebilirsiniz.
-
-## Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
-```
-
-Bu dosya, proje hakkında gerekli tüm bilgileri kod blokları ve formatlandırmalarla düzenli bir şekilde sunar.
-Projeyi klonlayıp kurulum adımlarını izleyen herhangi bir kişi, kolayca projeyi çalıştırabilir ve anlayabilir.
